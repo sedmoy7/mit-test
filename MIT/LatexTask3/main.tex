@@ -1,0 +1,68 @@
+\documentclass[coursework]{SCWorks}
+% Тип обучения (bachelor), форма (och), тип работы (coursework) по умолчанию
+
+\usepackage{preamble}
+
+% Настройка minted для C++ согласно требованиям и лекциям
+\setminted[cpp]{
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2,
+    bgcolor=lightgray!10,
+    fontsize=\small,
+    linenos=true
+}
+
+\begin{document}
+
+% Кафедра (в родительном падеже)
+\chair{информатики и программирования}
+
+% Тема работы
+\title{Применение методов машинного обучения и классификации данных}
+
+% Курс и группа
+\course{1}
+\group{151}
+
+% Направление подготовки
+\napravlenie{09.03.04 "--- Программная инженерия}
+
+% Фамилия, имя, отчество в родительном падеже
+\author{Андриянова Афанасия Валерьевича}
+
+% Заведующий кафедрой 
+\chtitle{доцент, к.\,ф.-м.\,н.}
+\chname{С.\,В.\,Миронов}
+
+% Научный руководитель
+\satitle{доцент, к.\,ф.-м.\,н.}
+\saname{Г.\,Г.\,Наркайтис}
+
+\maketitle
+
+% Включение нумерации рисунков, формул и таблиц по разделам
+\secNumbering
+
+\tableofcontents
+
+% Введение
+\intro
+\input{introduction}
+
+% Основная часть (разделенная на логические файлы)
+\input{theory}
+\input{implementation}
+
+% Заключение
+\conclusion
+\input{conclusion_text}
+
+% Библиографический список
+\bibliographystyle{ugost2003}
+\bibliography{thesis}
+
+% Приложения (если необходимы, каждая последующая секция будет приложением)
+\appendix
+
+\end{document}
